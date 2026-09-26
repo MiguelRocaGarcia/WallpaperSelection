@@ -53,4 +53,6 @@ xcodebuild test -scheme WallpaperSelection -destination "id=$UDID"
 - **VisionFilterTests**: runs the real Vision checks on the photos in `WallpaperSelectionTests/Fixtures/`. They're sorted into folders by expected outcome: `keep`, `person`, `animal`, `food`, `text` and `metadata`.
 - **SwipeFlowUITests**: drives the app end to end. It swipes through the whole seeded library, then checks undo, the album grid, removing a photo from the album, Settings, and that decisions persist after a relaunch.
 
+The test photos come from Wikimedia Commons under open licences. Credits are in [`WallpaperSelectionTests/Fixtures/ATTRIBUTION.md`](WallpaperSelectionTests/Fixtures/ATTRIBUTION.md).
+
 Simulator limitation: image classification, which catches food and documents, can't run in the simulator. There, those checks are skipped and such photos still appear. On a real iPhone they're filtered.
